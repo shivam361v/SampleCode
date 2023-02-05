@@ -1,0 +1,18 @@
+@using BOL;
+@{
+    ViewData["Title"] = "Citys Page";
+}
+
+ 
+ <h3>List of City</h3>
+@{
+    List<City> citys = ViewBag.catalog;
+
+    foreach( City c in citys)
+    {
+        Console.WriteLine(@c.CityId);
+        <li> <a href="#">@c.Name</a></li>
+        
+    }
+
+}
